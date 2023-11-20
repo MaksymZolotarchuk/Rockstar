@@ -18,16 +18,14 @@ int main(){
     
 
     int rowsMin = *min_element(&A[i][0], &A[i][0] + columns);
-    int rowsMax = *max_element(&A[i][0], &A[i][0] + columns);
+    //int rowsMax = *max_element(&A[i][0], &A[i][0] + columns);
     int columnsMax = *max_element(&A[0][k], &A[rows - 1][k]+1);
-    int columnsMin = *min_element(&A[0][k], &A[rows - 1][k]+1);
+    //int columnsMin = *min_element(&A[0][k], &A[rows - 1][k]+1);
 
-    if(rowsMin && columnsMax || rowsMax && columnsMin){
-      cout << i << k;
+    if(rowsMin && columnsMax){
+      cout << i << "," << k << endl;
         }
       }
     }
   return 0;
-
-
 }
